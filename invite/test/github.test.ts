@@ -43,8 +43,8 @@ describe.skip('GitHub interface', () => {
   afterEach(() => {
     // Fail the test if there were unused nocks.
     if(!nock.isDone()) {
-      throw new Error('Not all nock interceptors were used!');
       nock.cleanAll();
+      throw new Error('Not all nock interceptors were used!');
     }
   });
 
